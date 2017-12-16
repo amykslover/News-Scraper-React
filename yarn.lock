@@ -599,6 +599,31 @@ form-data@~2.1.1:
     combined-stream "^1.0.5"
     mime-types "^2.1.12"
 
+format-message-formats@^5.1.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/format-message-formats/-/format-message-formats-5.1.0.tgz#c9c49334a0891bf74dd9d4bbb3f626ab2de30b1d"
+
+format-message-interpret@^5.2.1:
+  version "5.2.1"
+  resolved "https://registry.yarnpkg.com/format-message-interpret/-/format-message-interpret-5.2.1.tgz#7c533c1f6ce01e75a443750994bc8c2f74162e3d"
+  dependencies:
+    format-message-formats "^5.1.0"
+    lookup-closest-locale "^5.1.0"
+
+format-message-parse@^5.1.2:
+  version "5.1.2"
+  resolved "https://registry.yarnpkg.com/format-message-parse/-/format-message-parse-5.1.2.tgz#bc5cf9f7ffd6b221927c4018b21bee551b99234d"
+
+format-message@^5.2.1:
+  version "5.2.1"
+  resolved "https://registry.yarnpkg.com/format-message/-/format-message-5.2.1.tgz#5a2ad53315fdffe2786399db0a2bf7f0ede127dc"
+  dependencies:
+    format-message-formats "^5.1.0"
+    format-message-interpret "^5.2.1"
+    format-message-parse "^5.1.2"
+    lookup-closest-locale "^5.1.0"
+    object-assign "^4.1.1"
+
 forwarded@~0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/forwarded/-/forwarded-0.1.2.tgz#98c23dab1175657b8c0573e8ceccd91b0ff18c84"
@@ -1056,6 +1081,10 @@ lodash@^4.14.0, lodash@^4.5.1:
   version "4.17.4"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.4.tgz#78203a4d1c328ae1d86dca6460e369b57f4055ae"
 
+lookup-closest-locale@^5.1.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/lookup-closest-locale/-/lookup-closest-locale-5.1.0.tgz#da2f820c31663b3f91e099580d689f0aa774d2d4"
+
 lowercase-keys@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/lowercase-keys/-/lowercase-keys-1.0.0.tgz#4e3366b39e7f5457e35f1324bdf6f88d0bfc7306"
@@ -1280,7 +1309,7 @@ oauth-sign@~0.8.1:
   version "0.8.2"
   resolved "https://registry.yarnpkg.com/oauth-sign/-/oauth-sign-0.8.2.tgz#46a6ab7f0aead8deae9ec0565780b7d4efeb9d43"
 
-object-assign@^4.1.0:
+object-assign@^4.1.0, object-assign@^4.1.1:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/object-assign/-/object-assign-4.1.1.tgz#2109adc7965887cfc05cbbd442cac8bfbb360863"
 
