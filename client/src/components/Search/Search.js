@@ -7,28 +7,27 @@ class Search extends Component {
 		super(props);
 
 		this.state = { 
-			term: '' ,
-			datestart: '',
-			dateend: ''
+			term: 'Cryptocurrency' ,
+			datestart: '20160101',
+			dateend: '20171231'
 		};
 	}
 
-	handleFormSubmit = event => {
+	handleFormSubmit = (event) => {
+		console.log('Inside Form Submit')
+		console.log(this.props);
     	event.preventDefault();
     	console.log(this.state)
+    	this.props.updateSearch(this.state.term, this.state.datestart, this.state.dateend)
     	this.setState({ term: "", datestart: "", dateend: "" });
   	};
 
-  // This code handles the sending of the search terms to the parent Search component
-  handleSubmit = (event) => {
-    event.preventDefault();
-    this.props.updateSearch(this.state.search, this.state.start, this.state.end);
-  }
-
+	//When a user hits the search button, the data they typed in should be 
+	//passed into the runQuery function defined in the helpers
 	render() {
 		return (
 		<div className="searchformdiv">
-			<form  onSubmit={this.handleFormSubmit}>
+			<form >
 				<div className="form-group">
 					<label htmlFor="searchterm">Search Term</label>
 					<input

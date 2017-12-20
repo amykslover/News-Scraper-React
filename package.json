@@ -4,7 +4,9 @@
   "description": "React-based rendition of a news-scraper application to practice creating React components, working with helper functions, and utilizing the React mounting lifecycle to query and display articles based on user searches. Node, Express and MongoDB will be used as a backend to allow users to save articles and view saved articles at a later date.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "client": "node scripts/start-client.js",
+    "start": "concurrently \"nodemon ./server/server.js\" \"npm run client\""
   },
   "repository": {
     "type": "git",
@@ -15,5 +17,15 @@
   "bugs": {
     "url": "https://github.com/amykslover/React-NewsReadingList/issues"
   },
-  "homepage": "https://github.com/amykslover/React-NewsReadingList#readme"
+  "homepage": "https://github.com/amykslover/React-NewsReadingList#readme",
+  "dependencies": {
+    "axios": "^0.17.1",
+    "body-parser": "^1.18.2",
+    "concurrently": "^3.5.1",
+    "express": "^4.16.2",
+    "mongo": "^0.1.0",
+    "mongoose": "^4.13.7",
+    "morgan": "^1.9.0"
+  },
+  "proxy": "http://localhost:3001"
 }

@@ -5,7 +5,7 @@ const db = require("../../models");
 
 // -------------------------------------------------
 // Route to get all saved articles
-router.get("/api/saved", function(request, response) {
+router.get("/saved", function(request, response) {
 	
 	db.Article
       .find({})
@@ -18,7 +18,7 @@ router.get("/api/saved", function(request, response) {
 
 
 // Route to add an article to saved list
-router.post("/api/saved", function(request, response) {
+router.post("/saved", function(request, response) {
 	console.log(request.body); 
 
     db.Article
@@ -29,7 +29,7 @@ router.post("/api/saved", function(request, response) {
 });
 
 // Route to delete an article from saved list
-router.delete("/api/saved/:id", function(req, res) {
+router.delete("/saved/:id", function(req, res) {
     console.log(request.params.id);
 
     db.Article

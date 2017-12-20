@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 const articleSchema = new Schema({
   title: { type: String },
   url: { type: String },
-  publishdate: { type: Date },
+  pub_date: { type: Date },
   note: { type: Schema.Types.ObjectId, ref: "Note"}
 });
 

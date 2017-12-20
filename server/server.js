@@ -27,7 +27,7 @@ app.use((req, res, next) => {
 // Serve up static assets
 app.use(express.static("client/build"));
 
-app.use("/api", routes);
+app.use("/", routes);
 
 // Any non API GET routes will be directed to our React App and handled by React Router
 app.get("*", function(req, res) {
