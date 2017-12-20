@@ -10,15 +10,6 @@ module.exports = {
     //   .then(dbModel => response.json(dbModel))
     //   .catch(error => response.status(422).json(error));
   },
-  savedArticleFind: function(request, response) {
-    console.log('articlesController: savedArticleFind')
-    console.log(request.params.id);
-
-    // db.Article
-    //   .findById(request.params.id)
-    //   .then(dbModel => response.json(dbModel))
-    //   .catch(error => response.status(422).json(error));
-  },
   savedArticleCreate: function(request, response) {
     console.log('articlesController: savedArticleCreate')
     console.log(request.body);
@@ -28,15 +19,8 @@ module.exports = {
     //   .then(dbModel => response.json(dbModel))
     //   .catch(error => response.status(422).json(error));
   },
-  // savedArticleUpdate: function(request, response) {
-  //   console.log('articlesController: savedArticleUpdate')
 
-  //   db.Article
-  //     .findOneAndUpdate({ _id: request.params.id }, request.body)
-  //     .then(dbModel => response.json(dbModel))
-  //     .catch(error => response.status(422).json(error));
-  // },
-  savedArticleRemove: function(request, response) {
+  savedArticleDelete: function(request, response) {
     console.log('articlesController: savedArticleRemove')
     console.log(request.params.id);
 

@@ -2,11 +2,9 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const articleSchema = new Schema({
-  title: { type: String, required: true },
-  byline: { type: String, required: true },
-  url: { type: String, required: true },
-  snippet: { type: String, required: false },
-  publishdate: { type: Date, required: true },
+  title: { type: String },
+  url: { type: String },
+  publishdate: { type: Date },
   note: { type: Schema.Types.ObjectId, ref: "Note"}
 });
 

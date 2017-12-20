@@ -1,27 +1,19 @@
 {
-  "name": "mern",
+  "name": "react-newsreadinglist",
   "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
+  "description": "React-based rendition of a news-scraper application to practice creating React components, working with helper functions, and utilizing the React mounting lifecycle to query and display articles based on user searches. Node, Express and MongoDB will be used as a backend to allow users to save articles and view saved articles at a later date.",
+  "main": "index.js",
   "scripts": {
-    "server": "node server.js",
-    "client": "node scripts/start-client.js",
-    "start": "concurrently \"nodemon server.js\" \"npm run client\"",
-    "build": "node scripts/build.js",
-    "seed": "node scripts/seedDB.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "installDeps": "yarn && cd client && yarn"
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amykslover/React-NewsReadingList.git"
   },
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "concurrently": "^3.5.0",
-    "nodemon": "^1.11.0"
+  "bugs": {
+    "url": "https://github.com/amykslover/React-NewsReadingList/issues"
   },
-  "dependencies": {
-    "axios": "^0.16.2",
-    "body-parser": "^1.17.2",
-    "express": "^4.15.4",
-    "mongoose": "^4.11.7"
-  }
+  "homepage": "https://github.com/amykslover/React-NewsReadingList#readme"
 }
