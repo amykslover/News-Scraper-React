@@ -1,14 +1,8 @@
-//index is the most parent component which is responsible for
-//fetching data
-import React from "react";
-import ReactDOM from "react-dom";
-import App from "./App";
-// import NYTSearch from 'newyorktimes-api-search';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
+import registerServiceWorker from './registerServiceWorker';
 
-// const API_KEY = '';
-
-// NYTSearch({key: })
-
-
-ReactDOM.render(<App />, document.getElementById("root"));
-
+ReactDOM.render(<App />, document.getElementById('root'));
+registerServiceWorker();

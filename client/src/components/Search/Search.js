@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./Search.css";
 
 class Search extends Component {
 
@@ -14,13 +15,20 @@ class Search extends Component {
 
 	handleFormSubmit = event => {
     	event.preventDefault();
+    	console.log(this.state)
     	this.setState({ term: "", datestart: "", dateend: "" });
   	};
+
+  // This code handles the sending of the search terms to the parent Search component
+  handleSubmit = (event) => {
+    event.preventDefault();
+    this.props.updateSearch(this.state.search, this.state.start, this.state.end);
+  }
 
 	render() {
 		return (
 		<div className="searchformdiv">
-			<form>
+			<form  onSubmit={this.handleFormSubmit}>
 				<div className="form-group">
 					<label htmlFor="searchterm">Search Term</label>
 					<input
@@ -28,10 +36,9 @@ class Search extends Component {
 					 className="form-control"
 					 id="searchterminput"
 					 placeholder="Enter Search Term"
-					 name="searchterm"
+					 name="term"
 					 value={this.state.term}
 					 onChange={event => this.setState({ term: event.target.value })} />
-					 Value of the input: {this.state.term}
 				</div>
 
 				<div className="form-group">
@@ -41,10 +48,9 @@ class Search extends Component {
 					 className="form-control"
 					 id="searchdatestartinput"
 					 placeholder="YYYYMMDD"
-					 name="startdate"
+					 name="datestart"
 					 value={this.state.datestart}
 					 onChange={event => this.setState({ datestart: event.target.value })} />
-					 Value of the input: {this.state.datestart}
 				</div>
 
 				<div className="form-group">
@@ -54,10 +60,9 @@ class Search extends Component {
 					 className="form-control"
 					 id="searchdateendinput"
 					 placeholder="YYYYMMDD"
-					 name="enddate"
+					 name="dateend"
 					 value={this.state.dateend}
 					 onChange={event => this.setState({ dateend: event.target.value })} />
-					 Value of the input: {this.state.dateend}
 				</div>
 			    <button type="button" className="btn btn-primary" onClick={this.handleFormSubmit}>Submit</button>
       		</form>
