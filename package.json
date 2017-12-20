@@ -1,0 +1,19 @@
+{
+  "name": "react-newsreadinglist",
+  "version": "1.0.0",
+  "description": "React-based rendition of a news-scraper application to practice creating React components, working with helper functions, and utilizing the React mounting lifecycle to query and display articles based on user searches. Node, Express and MongoDB will be used as a backend to allow users to save articles and view saved articles at a later date.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amykslover/React-NewsReadingList.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amykslover/React-NewsReadingList/issues"
+  },
+  "homepage": "https://github.com/amykslover/React-NewsReadingList#readme"
+}
