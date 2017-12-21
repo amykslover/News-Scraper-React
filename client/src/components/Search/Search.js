@@ -63,7 +63,9 @@ class Search extends Component {
 					 value={this.state.dateend}
 					 onChange={event => this.setState({ dateend: event.target.value })} />
 				</div>
+				<div className="buttondiv">
 			    <button type="button" className="btn btn-primary" onClick={this.handleFormSubmit}>Submit</button>
+      			</div>
       		</form>
 
 		</div>

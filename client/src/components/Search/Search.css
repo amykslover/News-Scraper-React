@@ -1,5 +1,9 @@
 .searchformdiv {
-	margin: 25px 50px 25px 50px; 
+	margin: 90px 50px 25px 50px; 
+}
+
+.buttondiv {
+	text-align: center;
 }
 
 label {

@@ -21,12 +21,13 @@ render() {
 			<div className="article-list"> 
 				<div className="article-list-left"> 
 					<button onClick= {this.handleClick} className="btn btn-primary">Save Article</button>
+					<br></br>
+					<a rel="noreferrer noopener" target="_blank" href={url}>Visit Article</a>
 				</div>
 
 				<div className="article-list-main"> 
 					<div className="article-detail"> 
-						<h3>{headline}</h3>
-						<a rel="noreferrer noopener" target="_blank" href={url}>Visit Article</a>
+						<h4>{headline}</h4>
 						<p>{pub_date}</p>
 					</div>
 				</div>

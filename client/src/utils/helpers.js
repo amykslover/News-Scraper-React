@@ -49,7 +49,7 @@ const helpers = {
       url: url,
       pub_date: date
        };
-
+    console.log(newArticle)
     return axios.post("/api/saved", newArticle)
       .then(function(response) {
         console.log("axios results", response.data._id);

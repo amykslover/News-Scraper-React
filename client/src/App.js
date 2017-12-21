@@ -6,7 +6,7 @@ import ListItem from "./components/Results/ListItem";
 import { Container, Row, Col } from "./components/Main";
 import Search from "./components/Search";
 import helpers from "./utils/helpers";
-
+import { Link } from "react-router";
 
 
 
@@ -29,7 +29,7 @@ class App extends Component {
         this.setState({ articles: res.docs })
 
       })
-      .catch(err => console.log(err));
+      .catch(error => console.log(error.response));
   };
 
 
@@ -38,6 +38,34 @@ class App extends Component {
     console.log(!this.state.articles);
     return (
         <div>
+          <nav className="navbar navbar-default navbar-fixed-top" role="navigation">
+            
+            <div className="container-fluid">
+              
+              <div className="navbar-header">
+                <button
+                  type="button"
+                  className="navbar-toggle"
+                  data-toggle="collapse"
+                  data-target=".navbar-ex1-collapse"
+                >
+                  <span className="sr-only">Toggle navigation</span>
+                  <span className="icon-bar"></span>
+                  <span className="icon-bar"></span>
+                  <span className="icon-bar"></span>
+                </button>
+              </div>
+
+              <div className="collapse navbar-collapse navbar-ex1-collapse">
+                <ul className="nav navbar-nav navbar-right">
+                  {/* Using <Link> in place of <a> and "to" in place of "href" */}
+                  <li>Search</li>
+                  <li>Saved Articles</li>
+                </ul>
+              </div>
+
+            </div>
+          </nav>
         <Container> 
           <Container className="searchformdiv"> 
             <Search updateSearch={this.setQuery.bind(this)}/> 
