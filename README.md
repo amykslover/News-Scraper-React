@@ -10,9 +10,4 @@ cd client
 yarn install
 cd ..
 yarn start
-``
-
-After both installations complete, run the following command in your terminal:
-
 ```
-yarn start
